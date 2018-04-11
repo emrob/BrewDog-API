@@ -49,15 +49,7 @@ const getBeer = function (beers) {
   })
 }
 
-// const populateList = function(beers){
-//   const select = document.getElementById("beer-list");
-//   for(let beer of beers){
-//   const option = document.createElement("option");
-//   option.innerText = beer.name;
-//   select.appendChild(option);
-// }
-//
-// };
+
 
 
 
@@ -68,9 +60,12 @@ const beerDetails = function (beer) {
   clearContent(div)
   const beerName = document.createElement('p')
   beerName.innerText = `Brand: ${beer.name}`
+  const beerIngred = document.createElement('p')
+  beerIngred.innerText = `Ingredients: ${beer.ingredients[0]}`
   const beerLogo = document.createElement('img')
   beerLogo.src = beer.image_url
   div.appendChild(beerName)
+  div.appendChild(beerIngred)
   div.appendChild(beerLogo)
   return div
 }

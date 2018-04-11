@@ -1,15 +1,9 @@
 const app = function(){
 const url = 'https://api.punkapi.com/v2/beers'
 makeRequest(url, requestComplete)
-// const button = document.getElementById("fetchBeer");
-// button.addEventListener("click", function(){
-
 let jsonString = localStorage.getItem("currentBeer");
 let saveBeer = JSON.parse(jsonString)
 beerDetails(saveBeer)
-// const selected = document.getElementById('beer-list');
-// selected.addEventListener('change', handleSelectChange) //change is a key word for a select drop down
-// });
 }
 
 
@@ -48,12 +42,6 @@ const getBeer = function (beers) {
     beerDetails(beer)
   })
 }
-
-
-
-
-
-
 
 const beerDetails = function (beer) {
   const div = document.getElementById('beer-details')
